@@ -252,6 +252,13 @@ a:hover {
   background: var(--bg-elevated);
 }
 
+.project-shot {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
 .project-shot:focus-visible {
   outline: 2px solid var(--focus);
   outline-offset: -2px;
@@ -290,7 +297,7 @@ a:hover {
   pointer-events: auto;
 }
 
-.gallery-controls {
+.shot-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -300,7 +307,7 @@ a:hover {
   background: #0b0b0a;
 }
 
-.gallery-btn {
+.shot-nav-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -315,12 +322,12 @@ a:hover {
   cursor: pointer;
 }
 
-.gallery-btn:hover {
+.shot-nav-btn:hover {
   border-color: var(--accent);
   color: var(--accent);
 }
 
-.gallery-status {
+.shot-nav-status {
   color: var(--muted);
   font-size: 0.75rem;
   font-weight: 500;
