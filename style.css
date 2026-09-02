@@ -266,6 +266,26 @@ a:hover {
   object-position: center 38%;
 }
 
+.project-media--photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  aspect-ratio: auto;
+  background: var(--line);
+}
+
+.project-media--photos img {
+  aspect-ratio: 3 / 4;
+  height: 100%;
+  object-position: center 36%;
+}
+
+@media (max-width: 719px) {
+  .project-media--photos {
+    grid-template-columns: 1fr;
+  }
+}
+
 .project-body {
   display: flex;
   flex-direction: column;
