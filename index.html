@@ -24,6 +24,7 @@
       content="Open-source tools, shipped in public. E-ink utilities first — not the whole map."
     />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="mark.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -90,7 +91,7 @@
                 <line x1="108" y1="148" x2="318" y2="148" stroke="#8a8478" stroke-width="2" />
                 <circle cx="464" cy="168" r="64" fill="none" stroke="#3dff87" stroke-width="1.25" />
                 <circle cx="464" cy="168" r="4" fill="#3dff87" />
-                <text x="400" y="268" fill="#8a8478" font-size="13" font-family="Georgia, serif">RSVP · 420 wpm</text>
+                <text x="400" y="268" fill="#8a8478" font-size="13" font-family="Georgia, serif">RSVP · 150 wpm</text>
               </svg>
             </div>
             <div class="project-body">
@@ -103,14 +104,14 @@
               <h3>RSVP Reader</h3>
               <p>
                 Speed-reading for EPUB on PocketBook Verse Pro Color (B300).
-                Rapid serial visual presentation, WPM control, chapter skip,
-                progress saved on the device. Download the ZIP, then copy
-                <code>rsvp.app</code> onto the reader.
+                One word at a time, chapter skip, progress saved on the device.
+                Default 150 WPM — color e-ink hard-caps at 200. Download the
+                ZIP, then copy <code>rsvp.app</code> onto the reader.
               </p>
               <ol class="install">
                 <li>Download the ZIP, unzip, copy <code>rsvp.app</code> into <code>applications/</code>.</li>
                 <li>Eject USB — apps often ignore new files while still connected.</li>
-                <li>Launch <strong>RSVP</strong> from the applications menu.</li>
+                <li>Launch <strong>RSVP Reader</strong> from the applications menu.</li>
               </ol>
               <p class="project-links">
                 <a
@@ -143,7 +144,7 @@
                 <text x="366" y="128" fill="#3dff87" font-size="18" font-family="Georgia, serif">PL</text>
                 <text x="366" y="168" fill="#8a8478" font-size="14" font-family="Georgia, serif">światło</text>
                 <text x="366" y="198" fill="#8a8478" font-size="14" font-family="Georgia, serif">strona</text>
-                <text x="96" y="360" fill="#8a8478" font-size="13" font-family="Georgia, serif">ENG&lt;&gt;PL · GER&lt;&gt;PL</text>
+                <text x="96" y="360" fill="#8a8478" font-size="13" font-family="Georgia, serif">EN DE FR ES ↔ PL</text>
               </svg>
             </div>
             <div class="project-body">
@@ -151,13 +152,13 @@
                 <li>Open source</li>
                 <li>PocketBook</li>
                 <li>CC BY-SA</li>
-                <li>Early</li>
+                <li>4 pairs</li>
               </ul>
               <h3>E-Ink Dictionaries</h3>
               <p>
-                Offline EN↔PL and DE↔PL dictionaries for PocketBook lookup.
-                Word data from Wiktionary / FreeDict (CC BY-SA); keep that
-                attribution if you redistribute.
+                Offline English, German, French, and Spanish ↔ Polish
+                dictionaries for PocketBook lookup. Word data from Wiktionary /
+                FreeDict (CC BY-SA); keep that attribution if you redistribute.
               </p>
               <ol class="install">
                 <li>
@@ -233,7 +234,9 @@
     </main>
 
     <footer class="site-footer">
-      <p><span class="accent">Sable</span>works</p>
+      <a class="footer-mark" href="#top">
+        <img src="mark.png" width="40" height="40" alt="Sableworks" />
+      </a>
       <p class="footer-meta">
         <a href="https://github.com/Sableworks" rel="noopener noreferrer">GitHub</a>
         <span aria-hidden="true"> · </span>
