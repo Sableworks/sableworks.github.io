@@ -244,46 +244,82 @@ a:hover {
 }
 
 .project-media {
-  aspect-ratio: 8 / 5;
+  position: relative;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
-  background: #161614;
+  background: #0b0b0a;
   border-bottom: 1px solid var(--line);
 }
 
-.project-media svg,
-.project-media img {
+.project-media > img,
+.project-media > svg,
+.gallery-slide {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.project-media--photo {
-  aspect-ratio: 3 / 4;
-  background: #0b0b0a;
-}
-
-.project-media--photo img {
   object-position: center 38%;
 }
 
-.project-media--photos {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1px;
-  aspect-ratio: auto;
-  background: var(--line);
+.gallery-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.28s var(--ease), visibility 0.28s var(--ease);
 }
 
-.project-media--photos img {
-  aspect-ratio: 3 / 4;
-  height: 100%;
-  object-position: center 36%;
+.gallery-slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
-@media (max-width: 719px) {
-  .project-media--photos {
-    grid-template-columns: 1fr;
-  }
+.gallery-controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.7rem 0.75rem;
+  background: linear-gradient(transparent, rgba(11, 11, 10, 0.82));
+}
+
+.gallery-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.15rem;
+  height: 2.15rem;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--bg) 72%, transparent);
+  color: var(--ink);
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.gallery-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.gallery-status {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.project-media:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: -2px;
 }
 
 .project-body {
@@ -479,7 +515,8 @@ a:hover {
   }
 
   .site-header,
-  .kofi-btn {
+  .kofi-btn,
+  .gallery-slide {
     transition: none;
   }
 }

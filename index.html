@@ -80,19 +80,37 @@
 
         <div class="project-grid">
           <article class="project-card">
-            <div class="project-media project-media--photos">
+            <div
+              class="project-media"
+              data-gallery
+              role="region"
+              aria-roledescription="carousel"
+              aria-label="RSVP Reader screenshots"
+              tabindex="0"
+            >
               <img
+                class="gallery-slide is-active"
                 src="photos/rsvp-play.jpg"
                 width="568"
                 height="998"
                 alt="RSVP Reader playing: the word Harry centered with focus marks."
               />
               <img
+                class="gallery-slide"
                 src="photos/rsvp-pause.jpg"
                 width="560"
                 height="1000"
                 alt="RSVP Reader pause panel at 150 WPM, ready to start."
               />
+              <div class="gallery-controls">
+                <button type="button" class="gallery-btn" data-gallery-prev aria-label="Previous screenshot">
+                  ‹
+                </button>
+                <span class="gallery-status" data-gallery-status aria-live="polite">1 / 2</span>
+                <button type="button" class="gallery-btn" data-gallery-next aria-label="Next screenshot">
+                  ›
+                </button>
+              </div>
             </div>
             <div class="project-body">
               <ul class="pills">
@@ -133,7 +151,7 @@
           </article>
 
           <article class="project-card">
-            <div class="project-media project-media--photo">
+            <div class="project-media">
               <img
                 src="photos/dictionaries-sable.jpg"
                 width="556"
@@ -186,12 +204,12 @@
 
           <article class="project-card project-card--soon">
             <div class="project-media" aria-hidden="true">
-              <svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg">
-                <rect width="640" height="400" fill="#121211" />
-                <line x1="96" y1="140" x2="280" y2="140" stroke="#3dff87" stroke-width="1.5" />
-                <line x1="96" y1="180" x2="420" y2="180" stroke="#2c2c28" stroke-width="1.5" />
-                <line x1="96" y1="220" x2="360" y2="220" stroke="#2c2c28" stroke-width="1.5" />
-                <line x1="96" y1="260" x2="200" y2="260" stroke="#2c2c28" stroke-width="1.5" />
+              <svg viewBox="0 0 480 640" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <rect width="480" height="640" fill="#121211" />
+                <line x1="72" y1="220" x2="210" y2="220" stroke="#3dff87" stroke-width="1.5" />
+                <line x1="72" y1="270" x2="320" y2="270" stroke="#2c2c28" stroke-width="1.5" />
+                <line x1="72" y1="320" x2="270" y2="320" stroke="#2c2c28" stroke-width="1.5" />
+                <line x1="72" y1="370" x2="150" y2="370" stroke="#2c2c28" stroke-width="1.5" />
               </svg>
             </div>
             <div class="project-body">
