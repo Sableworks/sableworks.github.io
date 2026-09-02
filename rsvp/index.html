@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSVP Reader — Sableworks</title>
+    <meta
+      name="description"
+      content="RSVP Reader for PocketBook Verse Pro Color (B300). Download the ZIP, copy rsvp.app onto the reader. Default 150 WPM, hard cap 200."
+    />
+    <link rel="canonical" href="https://sableworks.github.io/rsvp/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sableworks.github.io/rsvp/" />
+    <meta property="og:title" content="RSVP Reader — Sableworks" />
+    <meta
+      property="og:description"
+      content="Speed-reading for EPUB on PocketBook Verse Pro Color. Download the app ZIP — no build tools."
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../mark.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-mark" href="/"><span class="accent">Sable</span><span class="nav-mark-suffix">works</span></a>
+        <ul class="nav-links">
+          <li><a href="/#work">Work</a></li>
+          <li>
+            <a href="https://github.com/Sableworks" rel="noopener noreferrer">GitHub</a>
+          </li>
+          <li><a href="/#support">Support</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero hero--product" aria-labelledby="product-title">
+        <p class="eyebrow">PocketBook · MIT</p>
+        <h1 id="product-title">RSVP Reader</h1>
+        <p class="hero-sub">One word at a time on Verse Pro Color.</p>
+        <p class="hero-lead">
+          Speed-reading for EPUB on PocketBook Verse Pro Color (B300). Download
+          the ZIP, copy <code>rsvp.app</code> onto the reader. Default 150 WPM —
+          color e-ink hard-caps at 200. Other PocketBook models are untested.
+        </p>
+        <p class="hero-actions">
+          <a class="text-link" href="#download">Download</a>
+          <span aria-hidden="true"> · </span>
+          <a
+            class="text-link"
+            href="https://github.com/Sableworks/pocketbook-verse-pro-rsvp-reader"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        </p>
+      </section>
+
+      <section class="section" id="download" aria-labelledby="download-title">
+        <header class="section-header">
+          <p class="eyebrow">01 — Download</p>
+          <h2 id="download-title">Get the app</h2>
+          <p class="section-lead">
+            GitHub does not allow a bare <code>.app</code> file, so the binary
+            ships inside a ZIP. Unzip it, then copy <code>rsvp.app</code> to the
+            reader. No Docker, no compile.
+          </p>
+        </header>
+
+        <div class="dl-grid">
+          <a
+            class="dl-card"
+            id="rsvp-zip"
+            data-latest-release="Sableworks/pocketbook-verse-pro-rsvp-reader"
+            href="https://github.com/Sableworks/pocketbook-verse-pro-rsvp-reader/releases/download/v1.3.0/RSVP-Reader-v1.3.0-PocketBook-Verse-Pro-Color.zip"
+          >
+            <strong>PocketBook Verse Pro Color</strong>
+            <p class="meta">
+              ZIP with <code>rsvp.app</code> · latest
+              <span data-latest-tag>v1.3.0</span>
+            </p>
+            <span class="project-link">Download ZIP</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="section prose" id="install" aria-labelledby="install-title">
+        <header class="section-header">
+          <p class="eyebrow">02 — Install</p>
+          <h2 id="install-title">On the reader</h2>
+        </header>
+        <ol class="install">
+          <li>Download the ZIP and unzip it to get <code>rsvp.app</code>.</li>
+          <li>Connect the PocketBook via USB (PC Link / mass storage).</li>
+          <li>Copy <code>rsvp.app</code> into <code>applications/</code>.</li>
+          <li>Eject USB — apps often ignore new files while still connected.</li>
+          <li>Launch <strong>RSVP Reader</strong> from the applications menu.</li>
+        </ol>
+        <p>
+          After opening a book, playback does not start automatically — you get
+          a pause panel with progress, WPM, and Start. Swipe or the panel
+          adjusts speed in steps of ±10 (cap 200). Stay near 150 unless you have
+          checked a higher rate on your device.
+        </p>
+      </section>
+
+      <section class="section support" id="support" aria-labelledby="support-title">
+        <header class="section-header">
+          <p class="eyebrow">03 — Support</p>
+          <h2 id="support-title">If this helped you grow with me</h2>
+          <p class="section-lead">
+            I’m one person learning in public. Every Ko-fi is noticed — it
+            goes into tools and time for the next release, not a shop. Thank
+            you for making the next project possible.
+          </p>
+        </header>
+        <a
+          class="kofi-btn"
+          href="https://ko-fi.com/C3Q525T6Y5"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Support me on Ko-fi
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-mark" href="#top">
+        <img src="../mark.png" width="40" height="40" alt="Sableworks" />
+      </a>
+      <p class="footer-meta">
+        <a href="https://github.com/Sableworks" rel="noopener noreferrer">GitHub</a>
+        <span aria-hidden="true"> · </span>
+        <a href="mailto:blumek13@gmail.com">blumek13@gmail.com</a>
+        <span aria-hidden="true"> · </span>
+        <span id="year"></span>
+      </p>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

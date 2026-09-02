@@ -17,6 +17,7 @@
   onScroll();
 
   document.querySelectorAll("[data-gallery]").forEach(initGallery);
+  bindLatestRelease();
 
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener("click", function (event) {
@@ -34,6 +35,31 @@
 
   function prefersReducedMotion() {
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }
+
+  function bindLatestRelease() {
+    document.querySelectorAll("[data-latest-release]").forEach(function (link) {
+      var repo = link.getAttribute("data-latest-release");
+      if (!repo) return;
+      fetch("https://api.github.com/repos/" + repo + "/releases/latest")
+        .then(function (res) {
+          return res.ok ? res.json() : null;
+        })
+        .then(function (rel) {
+          if (!rel || !rel.assets) return;
+          var zip = rel.assets.find(function (asset) {
+            return /\.zip$/i.test(asset.name);
+          });
+          if (zip && zip.browser_download_url) {
+            link.href = zip.browser_download_url;
+          }
+          var tag = document.querySelector("[data-latest-tag]");
+          if (tag && rel.tag_name) {
+            tag.textContent = rel.tag_name;
+          }
+        })
+        .catch(function () {});
+    });
   }
 
   function initGallery(root) {
